@@ -1,0 +1,20 @@
+@startuml
+
+title Usecase for Lab_7
+
+left to right direction
+
+actor Користувач
+
+rectangle Software {
+
+    usecase (Створити online-заявку)
+    usecase (Авторизувати користувача)
+
+   (Створити online-заявку) .> (Авторизувати користувача) : include
+   
+   Користувач -- (Створити online-заявку)
+   Користувач -- (Авторизувати користувача)
+}
+
+@enduml
