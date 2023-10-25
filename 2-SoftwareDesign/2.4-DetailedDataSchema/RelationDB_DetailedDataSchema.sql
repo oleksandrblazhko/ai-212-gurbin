@@ -21,7 +21,7 @@ CREATE TABLE Users (
     fullName VARCHAR(140) NOT NULL CHECK (fullName ~ '^[A-Za-z ]+$'),
     sex VARCHAR(20) NOT NULL,
     age INT NOT NULL,
-    medCardNumber INT NOT NULL CHECK (medCardNumber::TEXT ~ '^[0-9]+$'),
+    medCardNumber VARCHAR(5) NOT NULL CHECK (medCardNumber ~ '^[0-9]+$'),
     appId INT NOT NULL REFERENCES OnlineApplication (appId),
     medsvcId INT NOT NULL REFERENCES MedService (medsvcId)
 );
