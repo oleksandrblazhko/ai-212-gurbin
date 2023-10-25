@@ -1,6 +1,6 @@
 @startuml
 hide circle
-title UML-ConceptClasses.puml
+title UML-ConceptClasses
 left to right direction
 
 Class Користувач{
