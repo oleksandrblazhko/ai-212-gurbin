@@ -1,0 +1,46 @@
+@startuml
+
+title DataModel
+left to right direction
+hide circle
+
+entity "User" as a01 {
+    (PK) userno
+    --
+    full_name
+    sex
+    age
+    medical_card_number
+    (FK) appno
+    (FK) medsvcno
+}
+
+entity "Online_application" as a02 {
+    (PK) appno
+    --
+    user_data
+}
+
+entity "Medical_service" as a03 {
+    (PK) medsvcno
+    --
+    medsvcname
+    date_and_time
+    cost
+    (FK) payno
+
+}
+
+entity "Payment" as a04 {
+    (PK) payno
+    --
+    payment_method
+}
+
+a02 --{ a01
+
+a03 --{ a01
+
+a04 -- a03
+
+@enduml
