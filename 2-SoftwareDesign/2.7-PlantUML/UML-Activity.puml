@@ -1,0 +1,15 @@
+@startuml
+title UML-Activity.puml
+
+start
+
+:The program authorizes the user; 
+
+if (Are the data entered correctly?) then (yes)
+  :Create a user account;
+stop
+else (no)
+  :Input error;
+
+stop
+@enduml

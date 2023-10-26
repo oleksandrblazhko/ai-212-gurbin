@@ -1,0 +1,28 @@
+@startuml
+hide circle
+title UML-ConceptClasses
+left to right direction
+
+Class Користувач{
+    ПІБ
+    Стать
+    Вік
+    Номер_медичної_картки
+}
+
+Class Медична_послуга{
+    Назва
+    Дата_та_час
+    Вартість
+}
+
+Class Оплата{
+    Метод_оплати
+}
+
+
+Користувач"1" --> "*"Медична_послуга: ViewingTheService
+
+Медична_послуга"1" --> "1"Оплата: StoresPaymentData
+
+@enduml
